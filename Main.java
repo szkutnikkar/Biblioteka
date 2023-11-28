@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         Biblioteka biblioteka = new Biblioteka();
 
-        // Dodaj więcej książek
+        
         biblioteka.dodajKsiazke(new Ksiazka("Java Programming", "John Smith", 5));
         biblioteka.dodajKsiazke(new Ksiazka("Władca Pierścieni", "J.R.R. Tolkien", 3));
         biblioteka.dodajKsiazke(new Ksiazka("Zbrodnia i Kara", "Fiodor Dostojewski", 7));
@@ -26,7 +26,7 @@ public class Main {
 
         Uczen uczen = new Uczen(imie, nazwisko);
 
-        // Mapa do przechowywania książek w magazynie, klucz to nazwa książki
+       
         Map<String, Ksiazka> mapaKsiazek = new HashMap<>();
         for (Ksiazka ksiazka : biblioteka.getKsiazki()) {
             mapaKsiazek.put(ksiazka.getTytul().toLowerCase(), ksiazka);
@@ -40,7 +40,7 @@ public class Main {
             System.out.println("4. Zakoncz zakupy");
 
             int wybor = scanner.nextInt();
-            scanner.nextLine();  // Clear the newline character
+            scanner.nextLine();  
 
             switch (wybor) {
                 case 1:
@@ -51,7 +51,7 @@ public class Main {
                     String nazwaKsiazki = scanner.nextLine().toLowerCase();
                     System.out.println("Podaj ilosc egzemplarzy do wypozyczenia:");
                     int ilosc = scanner.nextInt();
-                    scanner.nextLine();  // Clear the newline character
+                    scanner.nextLine();  
 
                     Ksiazka ksiazka = mapaKsiazek.get(nazwaKsiazki);
                     if (ksiazka != null) {
